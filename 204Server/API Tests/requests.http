@@ -1,0 +1,22 @@
+@host = http://localhost:3333
+
+
+### Create rescue without images
+### For images please use something like Postman and add the fields named "images"
+POST http://127.0.0.1:3333/rescues
+content-type: application/json
+
+{
+    "name": "Winnipeg Humane Society",
+    "latitude": 49.8594433,
+    "longitude": -97.2267369,
+    "about": "A community service organization committed to protecting animals from suffering, and to promoting their welfare and dignity.",
+    "donations": "We are primarily funded by donations from individuals and by grants from other charitable foundations. The WHS receives a fee for service from the City of Winnipeg towards sheltering cats.",
+    "registeredCharity": true
+}
+
+### Retrieve list of rescues
+GET {{host}}/rescues
+
+### Retrie a given rescue
+GET {{host}}/rescues/1
